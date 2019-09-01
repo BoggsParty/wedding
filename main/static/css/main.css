@@ -1,0 +1,128 @@
+/*{
+    border: 1px solid red !important;
+}*/
+/* Colors:
+Silver: #f0e7e7
+Blue Topaz: #054458
+Black: #130F12
+Purple: #703D57
+Light Blue: #70AABAF
+
+*/
+    
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    color: #EF4A0E
+}
+
+/*.btn {
+    background-color: #AEFFF9;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}*/
+.center {
+    text-align: center;
+}
+
+body {
+    background-color: #F3FFFE;
+}
+
+h1 {
+    font-size: 300%;
+    color: #054458;
+}
+h2 {
+    font-size: 250%;
+}
+h3 {
+    font-size: 200%;
+    color: #984447;
+}
+h3.black {
+    font-size: 200%;
+    color: black;
+}
+h3.gray {
+    font-size: 200%;
+    color: #667375;
+}
+h4.white {
+    color: white;
+}
+
+IMG.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+.right {
+    text-align: right;
+}  
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+ 
+p {
+    font-size: 125%;
+    color: #667375;
+}
+p.subscript {
+    color: black;
+}
+.spacer {
+    height: 25px;
+}
+.spacer-large {
+    height: 100px;
+}
+/* Start of Menu CSS */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #06706F
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #F3FFFE;
+  text-align: center;
+  font-size: 200%;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #F3FFFE;
+  color: #054458;
+  font-size: 200%;
+  text-decoration: none;
+}
+
+
+/* End of Menu CSS */
+
+/* Start of Footer CSS*/
+

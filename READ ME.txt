@@ -1,0 +1,4 @@
+Installed Django Apps
+
+tinymce
+importexport
