@@ -2,11 +2,9 @@
     border: 1px solid red !important;
 }*/
 /* Colors:
-Silver: #f0e7e7
-Blue Topaz: #054458
-Black: #130F12
-Purple: #703D57
-Light Blue: #70AABAF
+Gray: #667375
+Dark Blue: #06706F
+Light Blue: #F3FFFE
 
 */
     
@@ -18,7 +16,8 @@ Light Blue: #70AABAF
 }
 
 a {
-    color: #EF4A0E
+    color: #054458;
+    font-size: 200%;
 }
 
 /*.btn {
@@ -41,10 +40,13 @@ body {
 
 h1 {
     font-size: 300%;
+    font-family: serif;
     color: #054458;
 }
 h2 {
     font-size: 250%;
+    font-family: serif;
+    color: #667375;
 }
 h3 {
     font-size: 200%;
@@ -65,7 +67,10 @@ h4.white {
 IMG.center {
     display: block;
     margin-left: auto;
-    margin-right: auto }
+    margin-right: auto ;
+    border-radius: 8px;
+    box-shadow: 5px 5px 2px grey;
+}
 
 .right {
     text-align: right;
@@ -98,7 +103,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #06706F
+  background-color: #06706F;
+  box-shadow: 7px 7px 3px grey;
 }
 
 li {
@@ -121,6 +127,11 @@ li a:hover:not(.active) {
   text-decoration: none;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 
 /* End of Menu CSS */
 
