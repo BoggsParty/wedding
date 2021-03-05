@@ -7,7 +7,7 @@ from django.db.models import Sum
 
 @login_required(login_url='/accounts/login/') 
 def main(request):
-    links = get_list_or_404(Flat_Page)
+    links = get_list_or_404(Flat_Page, active=True)
     return render(request, 'main/home.html',{'links':links,})
     
     
@@ -21,6 +21,7 @@ def totals(request):
     links = get_list_or_404(Flat_Page)
     welcome_party_total = Guest.objects.aggregate(total=Sum('rsvp_welcome_dinner'))['total']
     boat_total = Guest.objects.aggregate(total=Sum('rsvp_boat'))['total']
-    after_party_total = Guest.objects.aggregate(total=Sum('rsvp_party'))['total']
+    invited = Guest.objects.aggregate(total=Sum('total_guests'))['total']
+    expected = Guest.objects.aggregate(total=Sum('expected_guests'))['total']
     
-    return render(request, 'main/totals.html',{'links':links,'welcome_party_total':welcome_party_total,'boat_total':boat_total,'after_party_total':after_party_total})
+    return render(request, 'main/totals.html',{'links':links,'welcome_party_total':welcome_party_total,'boat_total':boat_total,'invited':invited, 'expected':expected,})

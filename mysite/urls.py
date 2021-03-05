@@ -23,6 +23,8 @@ from django.conf.urls import url, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include('main.urls')),
-    url(r'^', include('flat_pages.urls')),
+    url(r'^', include('images.urls')),
+    url(r'^', include('guests.urls')),
+    url(r'^', include('flat_pages.urls')),    
     #path('summernote/', include('django_summernote.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

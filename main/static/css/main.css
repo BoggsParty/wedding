@@ -1,11 +1,17 @@
 /*{
     border: 1px solid red !important;
 }*/
-/* Colors:
+/* Old Colors:
 Gray: #667375
 Dark Blue: #06706F
 Light Blue: #F3FFFE
 
+
+New Colors:
+Gray: #fcfcfc
+Light blue: #e7f4f8
+Middle blue: #c8dfe6
+Dark blue: #485c63
 */
     
 *{
@@ -35,17 +41,17 @@ a {
 }
 
 body {
-    background-color: #F3FFFE;
+    background-color: #fcfcfc;
 }
 
 h1 {
     font-size: 300%;
-    font-family: serif;
+    font-family: 'Satisfy', cursive; 
     color: #054458;
 }
 h2 {
-    font-size: 250%;
-    font-family: serif;
+    font-size: 200%;
+    font-family: Verdana, sans-serif;
     color: #667375;
 }
 h3 {
@@ -98,33 +104,38 @@ p.subscript {
     height: 100px;
 }
 /* Start of Menu CSS */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.topnav {
+  background-color: #e7f4f8;
   overflow: hidden;
-  background-color: #06706F;
-  box-shadow: 7px 7px 3px grey;
 }
 
-li {
+/* Style the links inside the navigation bar */
+.topnav a {
   float: left;
-}
-
-li a {
   display: block;
-  color: #F3FFFE;
+  color: #485c63;
   text-align: center;
-  font-size: 200%;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 17px;
+  background-color: #e7f4f8;
 }
 
-li a:hover:not(.active) {
-  background-color: #F3FFFE;
-  color: #054458;
-  font-size: 200%;
-  text-decoration: none;
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #c8dfe6;
+  color: #485c63;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #e7f4f8;
+  color: #485c63;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
 }
 
 footer {

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'main/header-footer.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/rsvp.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="center">
+	<section class="container">
+			<div class="spacer"></div>
+				<h2>RSVP</h2>
+			<form method="POST" class="post-form">{% csrf_token %}
+			<h4>Name(s): {{ form.guests }}</h4>
+			<div class="spacer"></div>
+			{{ form.rsvp }}
+			<div class="spacer"></div>
+			<h4>Please provide an email to reach you with:</h4>
+				{{ form.email }} 			
+			<div class="spacer"></div>
+			<h4>Additional notes (dietary restrictions etc.):</h4>
+				{{ form.notes }}
+			<div class="spacer"></div>
+			<button type="submit" class="save btn btn-default">Submit</button>
+			<div class="spacer"></div>
+			</form>
+	</section>
+</div>	
+{% endblock %}
