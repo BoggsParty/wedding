@@ -42,16 +42,15 @@ a {
 
 body {
     background-color: #fcfcfc;
+	font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
     font-size: 300%;
-    font-family: 'Satisfy', cursive; 
     color: #054458;
 }
 h2 {
     font-size: 200%;
-    font-family: Verdana, sans-serif;
     color: #667375;
 }
 h3 {
@@ -70,12 +69,9 @@ h4.white {
     color: white;
 }
 
-IMG.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto ;
-    border-radius: 8px;
-    box-shadow: 5px 5px 2px grey;
+.responsive {
+  max-width: 70%;
+  height: auto;
 }
 
 .right {
