@@ -9,6 +9,6 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def flat_page(request, slug):
     content = get_object_or_404(Flat_Page, slug=slug, active=True)
-    links = get_list_or_404(Flat_Page, active=True)
+    links = Flat_Page.objects.filter(active=True).order_by('order')
     return render(request, 'flat_pages/flat_page.html',{'links':links,'content':content,})
 
