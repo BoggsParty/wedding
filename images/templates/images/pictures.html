@@ -16,7 +16,7 @@
 
 			{% for pictures in pictures %}
 			  <div class="column">
-				<img class="page" src="/media/{{ pictures.url }}.jpg" style="width:100%" onclick="openModal();currentSlide({{ forloop.counter }})" class="hover-shadow cursor">
+				<img class="page" src="/media/{{ pictures.url }}" style="width:100%" onclick="openModal();currentSlide({{ forloop.counter }})" class="hover-shadow cursor">
 			  </div>
 			{% endfor %}
 
