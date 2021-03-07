@@ -5,8 +5,8 @@ from flat_pages.models import Flat_Page
 from images.models import Image
 from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def pictures(request):
-    links = get_list_or_404(Flat_Page, active=True)
+    links = Flat_Page.objects.filter(active=True).order_by('order') 
     pictures = Image.objects.filter(gallery=True).order_by('order') 
     return render(request, 'images/pictures.html',{'links':links,'pictures':pictures,})

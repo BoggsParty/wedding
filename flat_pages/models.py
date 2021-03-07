@@ -5,6 +5,7 @@ class Flat_Page(models.Model):
     slug = models.SlugField(default='', unique=True, blank=True)
     content = models.TextField(default='', blank=True)
     active = models.BooleanField(default=False)
+    order = models.IntegerField(default=0)
     
     def __str__(self):
         return self.title

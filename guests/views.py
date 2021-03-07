@@ -6,8 +6,9 @@ from images.models import Image
 from django.contrib.auth.decorators import login_required
 from .forms import RSVPForm
 
+@login_required
 def rsvp(request):
-    links = get_list_or_404(Flat_Page, active=True)
+    links = Flat_Page.objects.filter(active=True).order_by('order')
     if request.method == "POST":
         form = RSVPForm(request.POST)
         if form.is_valid():
@@ -17,7 +18,8 @@ def rsvp(request):
     else:
         form = RSVPForm()
     return render(request, 'guests/rsvp.html', {'form': form,'links':links,})
-    
+
+@login_required  
 def thank_you(request):
-    links = get_list_or_404(Flat_Page, active=True)
+    links = Flat_Page.objects.filter(active=True).order_by('order')
     return render(request, 'guests/thank_you.html',{'links':links,})
