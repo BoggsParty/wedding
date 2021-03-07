@@ -34,8 +34,8 @@ img.page {
 }
 @media only screen and (max-width: 600px) {
 	img.page {
-		width: 100%; /* You can set the dimensions to whatever you want */
-		height: auto;
+		height: 100%; /* You can set the dimensions to whatever you want */
+		width: auto;
 		
 	}	
 
