@@ -5,7 +5,6 @@ from .models import Guest, RSVP
 
 class guest_admin(ImportExportModelAdmin, admin.ModelAdmin):
     list_display  = ('guest_1','total_guests','address',)
-    list_filter = ('rsvp_boat',)
     search_fields = ('guest_1',)
 
 admin.site.register(Guest,guest_admin,)
