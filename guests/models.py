@@ -21,7 +21,7 @@ class Guest (models.Model):
 
 class RSVP (models.Model):
 
-    guests = models.CharField(max_length=500, blank=True)
+    guests = models.CharField(max_length=500)
     
     BOOL_CHOICES = ((True, 'Accepts with pleasure'), (False, 'Declines with regret'))
     rsvp = models.BooleanField(choices=BOOL_CHOICES,default=False)
