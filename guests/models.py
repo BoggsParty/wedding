@@ -15,6 +15,7 @@ class Guest (models.Model):
     welcome_dinner_invite = models.BooleanField(default=False)
     rsvp_welcome_dinner = models.BooleanField(default=False)
     vaccinated = models.BooleanField(default=False)
+    rsvp = models.BooleanField(default=False)
     
     def __str__(self):
         return self.guest_1
