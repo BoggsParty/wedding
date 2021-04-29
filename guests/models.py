@@ -6,7 +6,6 @@ class Guest (models.Model):
     guest_2 = models.CharField(max_length=100, blank=True)
     kids = models.CharField(max_length=100, blank=True)
     total_guests = models.IntegerField(default=0)
-    expected_guests = models.IntegerField(default=0)
     rsvp_guests = models.IntegerField(default=0)
     
     address = models.TextField(max_length=1000, blank=True)
@@ -14,7 +13,7 @@ class Guest (models.Model):
     
     welcome_dinner_invite = models.BooleanField(default=False)
     rsvp_welcome_dinner = models.BooleanField(default=False)
-    vaccinated = models.BooleanField(default=False)
+    vaccinated = models.IntegerField(default=0)
     rsvp = models.BooleanField(default=False)
     
     def __str__(self):
@@ -28,5 +27,6 @@ class RSVP (models.Model):
     rsvp = models.BooleanField(choices=BOOL_CHOICES,default=False)
     
     email = models.EmailField(blank=True)
+    vaccinated = models.CharField(max_length=500,blank=True)
     notes = models.TextField(max_length=1000,blank=True)
     

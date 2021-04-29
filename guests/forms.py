@@ -5,4 +5,4 @@ class RSVPForm(forms.ModelForm):
 
     class Meta:
         model = RSVP
-        fields = ('guests', 'rsvp', 'email', 'notes',)
+        fields = ('guests', 'rsvp', 'email','vaccinated','notes',)

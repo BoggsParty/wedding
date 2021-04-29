@@ -4,7 +4,7 @@ from import_export import resources
 from .models import Guest, RSVP
 
 class guest_admin(ImportExportModelAdmin, admin.ModelAdmin):
-    list_display  = ('guest_1','rsvp','rsvp_guests','address',)
+    list_display  = ('guest_1','rsvp','rsvp_guests','address','vaccinated')
     search_fields = ('guest_1',)
     list_filter = ('rsvp',)
 
